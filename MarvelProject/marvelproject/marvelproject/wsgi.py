@@ -1,5 +1,5 @@
 """
-WSGI config for MarvelProject project.
+WSGI config for marvelproject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MarvelProject.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'marvelproject.settings')
 
 application = get_wsgi_application()
