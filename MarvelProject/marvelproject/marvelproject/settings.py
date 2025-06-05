@@ -51,6 +51,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGIN_REDIRECT_URL = '/guide_view'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/accounts/login/' 
+LOGOUT_URL = '/accounts/logout/'
+
 ROOT_URLCONF = 'marvelproject.urls'
 
 TEMPLATES = [

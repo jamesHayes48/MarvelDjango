@@ -35,3 +35,7 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 
+def guide_view(request): 
+    '''Function to display comic lists associated with the user'''
+    
+    return render(request, 'pages/guide_view.html')
