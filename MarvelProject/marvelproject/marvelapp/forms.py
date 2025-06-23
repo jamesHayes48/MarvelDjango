@@ -1,11 +1,11 @@
 from django import forms
 from .models import ReadingGuide
 
+from martor.fields import MartorFormField
+
 class ListForm(forms.ModelForm):
     '''Form for users to create a list'''
-    title = forms.TextInput(empty_label="Enter name of guide", required=True)
-
-    section = forms.TextInput(empty_label="Enter list of comics using markdown, use []-'for best use'")
+    reading_list = MartorFormField()
 
     class Meta:
         model = ReadingGuide
