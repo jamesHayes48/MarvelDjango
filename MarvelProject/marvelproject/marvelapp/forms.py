@@ -1,11 +1,11 @@
 from django import forms
 from .models import ReadingGuide
 
-from martor.fields import MartorFormField
+from markdownx.fields import MarkdownxFormField
 
 class ListForm(forms.ModelForm):
     '''Form for users to create a list'''
-    reading_list = MartorFormField()
+    reading_list = MarkdownxFormField()
 
     class Meta:
         model = ReadingGuide

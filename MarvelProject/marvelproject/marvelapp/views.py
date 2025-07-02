@@ -48,4 +48,3 @@ def create_list(request):
     '''Function to allow users to create a comic list'''
     form = ListForm()
     return render(request, 'pages/create_list.html', {'form': form})
-    
