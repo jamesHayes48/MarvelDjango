@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from martor.models import MartorField
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 
 User = get_user_model()
 
@@ -16,4 +17,10 @@ class ReadingGuide(models.Model):
     '''
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    reading_list = MartorField()
+    reading_list = MarkdownxField()
+
+    def formatted_markdown(self):
+        return markdownify(self.reading_list)
+    
+    def __str__(self):
+        return self.title

@@ -2,3 +2,5 @@ requests>=2.32.3
 python-dotenv>=1.1.0
 Django>=4.2.21
 django-bootstrap-v5>=1.0.11
+django-markdownx>=4.0.9
+markdown-checklist>=0.4.4

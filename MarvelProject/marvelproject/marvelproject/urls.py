@@ -21,7 +21,6 @@ from markdownx import urls as markdownx
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('markdownx/', include(markdownx)),
-    path('martor/', include('martor.urls')),
+    path('markdownx/', include('markdownx.urls')),
     path('', include('marvelapp.urls')),
 ]
