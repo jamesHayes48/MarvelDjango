@@ -47,4 +47,18 @@ def guide_view(request):
 def create_list(request):
     '''Function to allow users to create a comic list'''
     form = ListForm()
+
+    if request.method == 'POST':
+        form = ListForm(request.POST)
+
+        if form.is_valid():
+            list = form.save(commit=False)
+            list.creator = request.user
+            
+            list.save()
+            form.save_m2m()
+
+            return redirect('guide_view')
+
+
     return render(request, 'pages/create_list.html', {'form': form})

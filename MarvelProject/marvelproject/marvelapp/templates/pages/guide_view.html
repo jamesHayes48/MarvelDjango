@@ -2,11 +2,14 @@
 
 {% block content %}
 
-<div class="card p-4 shadow" style="max-width: 1200px; margin: 0 auto;">
+<div class="card p-4 shadow" style="max-width: 1600px; margin: 0 auto;">
     <div class="card-body">
+        <h1>My Lists</h1>
         <a type="submit" class="btn btn-primary" href="{% url 'create_list' %}" role="button">Create</a>
-        <h2>My Lists</h2>
-        
+        {% for list in lists %}
+            <h3>{{ list.title }}</h3>
+            <p>{{ list.formatted_markdown|safe }}</p>
+        {% endfor %}
     </div>
 </div>
 

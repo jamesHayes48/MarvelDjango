@@ -145,5 +145,5 @@ MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'markdown.extensions.sane_lists',
     'markdown.extensions.codehilite',
     'markdown.extensions.admonition',
-    'markdown_checklist.extension',  # ✅ Task lists
+    'markdown_checklist.extension', 
 ]
